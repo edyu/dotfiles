@@ -28,13 +28,19 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
+  'history-substring-search' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
-  'history-substring-search' \
-  'git'
+  'homebrew' \
+  'osx' \
+  'git' \
+  'node' \
+  'haskell' \
+  'syntax-highlighting' \
+  'tmux' \
+  'prompt'
 
 #
 # Editor
