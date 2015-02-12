@@ -1,0 +1,65 @@
+function prompt_ed_precmd {
+  # Get Git repository information.
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
+}
+
+function prompt_ed_cur_tty {
+  if [ `uname` = 'Linux' ]; then
+      _cur_tty=$(tty | sed -e "s/.*\(tty\|pts\)\/\?\(.*\)/\2/")
+  elif [ `uname` = 'FreeBSD' ]; then
+      export TERM=xterm-color
+      _cur_tty=$(tty | cut -d / -f 3)
+  elif [ `uname` = 'SunOS' ]; then
+      _cur_tty=$(tty | cut -d / -f 4)
+  elif [ `uname` = 'Darwin' ]; then
+      _cur_tty=$(tty | sed -e "s/.*\(ttys\)\(.*\)/\2/")
+  fi
+}
+
+function prompt_ed_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Format current tty
+  prompt_ed_cur_tty
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_ed_precmd
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:action' format ':%%B%F{yellow}%s%f%%b'
+  zstyle ':prezto:module:git:info:added' format ' %%B%F{green}✚%f%%b'
+  zstyle ':prezto:module:git:info:ahead' format ' %%B%F{yellow}⬆%f%%b'
+  zstyle ':prezto:module:git:info:behind' format ' %%B%F{yellow}⬇%f%%b'
+  zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
+  zstyle ':prezto:module:git:info:clean' format ' %F{green}✔%f'
+  zstyle ':prezto:module:git:info:dirty' format ' %F{red}✗%f'
+  zstyle ':prezto:module:git:info:deleted' format ' %%B%F{red}✖%f%%b'
+  zstyle ':prezto:module:git:info:modified' format ' %%B%F{blue}✱%f%%b'
+  zstyle ':prezto:module:git:info:renamed' format ' %%B%F{magenta}➜%f%%b'
+  zstyle ':prezto:module:git:info:stashed' format ' %%B%F{cyan}✭%f%%b'
+  zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{yellow}═%f%%b'
+  zstyle ':prezto:module:git:info:untracked' format ' %%B%F{white}◼%f%%b'
+  zstyle ':prezto:module:git:info:keys' format \
+    'prompt' ' %F{green}(%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F{green})%f' \
+    'rprompt' '%C%D'
+
+  # Define prompts.
+  # no longer than 30 or substituted by ...
+  PROMPT='%F{cyan}%h%f%(3L.+.-)[%F{blue}%30<...<%~%<<%f${git_info:+${(e)git_info[prompt]}}%F{red}%(?..☞ %?)%f]${editor_info[keymap]}%# '
+  RPROMPT='[${SSH_TTY:+"%F{yellow}%n%f@%F{green}%m%f"}%F{blue}${_cur_tty}%f${git_info[rprompt]}] ${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}' SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+# special chars
+#±
+#●
+#»
+
+prompt_ed_setup "$@"
