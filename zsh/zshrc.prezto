@@ -38,3 +38,7 @@ expand-or-complete-with-dots() {      # This bunch of code displays
 }
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
+
+if [[ -s "/usr/local/share/zsh/site-functions/_aws" ]]; then
+  source /usr/local/share/zsh/site-functions/_aws
+fi
