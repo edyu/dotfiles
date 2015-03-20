@@ -19,11 +19,13 @@ export VISUAL=$EDITOR
 # dark background
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export LSCOLORS="exfxcxdxbxegedabagacad"
+export PATH=$PATH:~/.cabal/bin
 
 alias vi=vim
 alias tma='tmux attach -d -t'
 alias tmn='tmux new -s $(basename $(pwd))'
 alias tml='tmux list-sessions'
+alias f='find . -name'
 
 unsetopt CORRECT                      # Disable autocorrect guesses.
                                       # Happens when typing a wrong
