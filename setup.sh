@@ -1,5 +1,12 @@
 #!/bin/zsh
 
+#
+# Prereq:
+#   apt-get install zsh
+#   apt-get install git
+#   git clone https://github.com/edyu/dotfiles.git
+#
+
 cd $HOME
 
 # link git files
@@ -68,7 +75,7 @@ fi
 
 cd $HOME/dev
 if [[ ! -d vim-colors-solarized ]]; then
-  git clone https://github.com/altercation/vim-colors-solarized
+  git clone https://github.com/altercation/vim-colors-solarized.git
 fi
 cd $HOME
 
