@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 export EDITOR=vim
 export VISUAL=$EDITOR
+export GIT_EDITOR=$EDITOR
 #export CLICOLOR=1
 # light background
 #export LSCOLORS=ExFxCxDxBxegedabagacad
