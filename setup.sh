@@ -73,12 +73,6 @@ if [[ ! -d $HOME/.haskell-vim-now ]]; then
   curl -o - https://raw.githubusercontent.com/begriffs/haskell-vim-now/master/install.sh | bash
 fi
 
-cd $HOME/dev
-if [[ ! -d vim-colors-solarized ]]; then
-  git clone https://github.com/altercation/vim-colors-solarized.git
-fi
-cd $HOME
-
 if [[ -h .vimrc.local ]]; then
   rm -f .vimrc.local
 elif [[ -r .vimrc.local ]]; then
