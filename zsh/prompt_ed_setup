@@ -14,6 +14,7 @@ function prompt_ed_cur_tty {
   elif [ `uname` = 'SunOS' ]; then
       _cur_tty=$(tty | cut -d / -f 4)
   elif [ `uname` = 'Darwin' ]; then
+      export TERM=xterm-256color
       _cur_tty=$(tty | sed -e "s/.*\(ttys\)\(.*\)/\2/")
   fi
 }
@@ -54,7 +55,8 @@ function prompt_ed_setup {
   # Define prompts.
   # no longer than 30 or substituted by ...
   PROMPT='%F{cyan}%h%f%(3L.+.-)[%F{blue}%30<...<%~%<<%f${git_info:+${(e)git_info[prompt]}}%F{red}%(?..☞ %?)%f]${editor_info[keymap]}%# '
-  RPROMPT='[${SSH_TTY:+"%F{yellow}%n%f@%F{green}%m%f"}%F{blue}${_cur_tty}%f${git_info[rprompt]}] ${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}' SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+  RPROMPT='[${SSH_TTY:+"%F{yellow}%n%f@%F{green}%m%f:"}%F{blue}${_cur_tty}%f${git_info[rprompt]}]${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}'
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
 # special chars
