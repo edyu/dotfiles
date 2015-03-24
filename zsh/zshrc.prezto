@@ -44,3 +44,16 @@ bindkey "^I" expand-or-complete-with-dots
 if [[ -s "/usr/local/share/zsh/site-functions/_aws" ]]; then
   source /usr/local/share/zsh/site-functions/_aws
 fi
+if [[ -s "/Users/ed/.nix-profile/etc/profile.d/nix.sh" ]]; then
+  source /Users/ed/.nix-profile/etc/profile.d/nix.sh
+fi
+
+# Incremental search
+bindkey -M vicmd "/" history-incremental-search-backward
+bindkey -M vicmd "?" history-incremental-search-forward
+
+# Search based on what you typed already
+bindkey -M vicmd "//" history-beginning-search-backward
+bindkey -M vicmd "??" history-beginning-search-forward
+
+bindkey -M vicmd "q" push-line
