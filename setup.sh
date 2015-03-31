@@ -65,6 +65,7 @@ if [ `uname` = 'Linux' ]; then
   sudo apt-get install libcurl4-openssl-dev
 elif [ `uname` = 'Darwin' ]; then
   brew install ctags
+  brew install wget
 fi
 if [[ ! -f $HOME/.cabal/bin/happy ]]; then
   cabal install happy
@@ -87,3 +88,19 @@ fi
 ln -s ~/dev/dotfiles/vim/vim.local.haskell-vim-now .vim.local
 
 vim +PluginInstall +qall
+
+if [[ ! -f $HOME/.cabal/bin/hlint ]]; then
+  cabal install hlint
+fi
+if [[ ! -f $HOME/.cabal/bin/hoogle ]]; then
+  cabal install hoogle
+fi
+if [[ ! -d $HOME/.ghc ]]; then
+  mkdir $HOME/.ghc
+fi
+if [[ -h .ghci.conf ]]; then
+  rm -f .ghci.conf
+elif [[ -r .ghci.conf ]]; then
+  mv .ghci.conf .ghci.conf.$$.bak
+fi
+ln -s ~/dev/dotfiles/haskell/ghci.conf $HOME/.ghc/.ghci.conf
