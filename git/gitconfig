@@ -9,7 +9,7 @@
 	rebase = true
 [core]
 	autocrlf = input
-	editor = vim
+	editor = /usr/local/bin/vim
 [rerere]
 	enabled = true
 [alias]
