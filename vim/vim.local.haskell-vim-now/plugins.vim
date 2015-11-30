@@ -1,3 +1,5 @@
 Plug 'altercation/vim-colors-solarized'
 Plug 'fatih/vim-go'
 Plug 'elmcast/elm-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
