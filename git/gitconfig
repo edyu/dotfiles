@@ -1,6 +1,6 @@
 [user]
 	name = Ed Yu
-	email = edlyuu@gmail.com
+	email = ed@overnest.com
 [push]
 	default = simple
 [color]
@@ -17,3 +17,5 @@
 	lg = log --oneline --decorate --all --graph
 [branch]
 	autosetuprebase = always
+[credential]
+	helper = osxkeychain

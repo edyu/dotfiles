@@ -1,2 +1,5 @@
 set background=dark
 colorscheme solarized
+filetype plugin indent on
+syntax enable
+au BufNewFile,BufRead *.rs set filetype=rust
