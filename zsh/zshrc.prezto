@@ -32,8 +32,9 @@ export DOCKER_MACHINE_NAME="default"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+export ANDROID_HOME=~/Library/Android/sdk
 #
-export PATH=$PATH:~/bin:~/.cabal/bin:~/.haskell-vim-now/bin:$GOPATH/bin:~/Library/Android/sdk/platform-tools
+export PATH=$PATH:~/bin:~/.cabal/bin:~/.haskell-vim-now/bin:$GOPATH/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 
 alias vi=vim
 alias tma='tmux attach -d -t'
@@ -74,20 +75,11 @@ bindkey "^I" expand-or-complete-with-dots
 if [[ -s "/usr/local/share/zsh/site-functions/_aws" ]]; then
   source /usr/local/share/zsh/site-functions/_aws
 fi
-if [[ -s "/usr/local/share/zsh/site-functions/_brew" ]]; then
-  source /usr/local/share/zsh/site-functions/_brew
-fi
 if [[ -s "/usr/local/share/zsh/site-functions/_docker" ]]; then
   source /usr/local/share/zsh/site-functions/_docker
 fi
 if [[ -s "/usr/local/share/zsh/site-functions/_docker-compose" ]]; then
   source /usr/local/share/zsh/site-functions/_docker-compose
-fi
-if [[ -s "/usr/local/share/zsh/site-functions/_git" ]]; then
-  source /usr/local/share/zsh/site-functions/_git
-fi
-if [[ -s "/usr/local/share/zsh/site-functions/_cargo" ]]; then
-  source /usr/local/share/zsh/site-functions/_cargo
 fi
 if [[ -s "/Users/ed/.nix-profile/etc/profile.d/nix.sh" ]]; then
   source /Users/ed/.nix-profile/etc/profile.d/nix.sh
