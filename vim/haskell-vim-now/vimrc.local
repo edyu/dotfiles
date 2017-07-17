@@ -3,3 +3,4 @@ colorscheme solarized
 filetype plugin indent on
 syntax enable
 au BufNewFile,BufRead *.rs set filetype=rust
+au BufNewFile,BufRead *.js set filetype=javascript.jsx
