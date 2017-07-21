@@ -19,3 +19,7 @@
 	autosetuprebase = always
 [credential]
 	helper = osxkeychain
+[diff]
+	tool = code-diff
+[difftool "code-diff"]
+	tool = code --wait --diff $LOCAL $REMOTE

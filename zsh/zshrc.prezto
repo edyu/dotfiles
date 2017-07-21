@@ -11,9 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-export EDITOR=vim
-export VISUAL=$EDITOR
-export GIT_EDITOR=$EDITOR
 #export CLICOLOR=1
 # light background
 #export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -32,9 +29,15 @@ export DOCKER_MACHINE_NAME="default"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+export VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 export ANDROID_HOME=~/Library/Android/sdk
 #
-export PATH=$PATH:~/bin:~/.cabal/bin:~/.haskell-vim-now/bin:$GOPATH/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+export PATH=$PATH:~/bin:~/.cabal/bin:~/.haskell-vim-now/bin:$GOPATH/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$VSCODE_PATH
+
+export EDITOR=vim
+export VISUAL=code
+export GIT_EDITOR=code
 
 alias vi=vim
 alias tma='tmux attach -d -t'
