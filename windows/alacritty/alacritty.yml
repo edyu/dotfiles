@@ -1,0 +1,155 @@
+window:
+    dimentions:
+        columns: 80
+        lines: 24
+
+    decorations: full
+
+enable_experimental_conpty_backend: true
+
+env:
+    TERM: xterm-256color
+
+# Colors (Nord)
+colors:
+    # Default colors
+    primary:
+        background: '0x2E3440'
+        foreground: '0xD8DEE9'
+
+    cursor:
+        text: '0x2E3440'
+        cursor: '0xD8DEE9'
+
+    # Normal colors
+    normal:
+        black:   '0x3B4252'
+        red:     '0xBF616A'
+        green:   '0xA3BE8C'
+        yellow:  '0xEBCB8B'
+        blue:    '0x81A1C1'
+        magenta: '0xB48EAD'
+        cyan:    '0x88C0D0'
+        white:   '0xE5E9F0'
+
+    # Bright colors
+    bright:
+        black:   '0x4C566A'
+        red:     '0xBF616A'
+        green:   '0xA3BE8C'
+        yellow:  '0xEBCB8B'
+        blue:    '0x81A1C1'
+        magenta: '0xB48EAD'
+        cyan:    '0x8FBCBB'
+        white:   '0xECEFF4'
+
+# Colors (Cobalt 2)
+#colors:
+#    cursor:
+#        text: '0xfefff2'
+#        cursor: '0xf0cc09'
+#
+#    selection:
+#        text: '0xb5b5b5'
+#        background: '0x18354f'
+#
+#    # Default colors
+#    primary:
+#        background: '0x132738'
+#        foreground: '0xffffff'
+#
+#    # Normal colors
+#    normal:
+#        black:   '0x000000'
+#        red:     '0xff0000'
+#        green:   '0x38de21'
+#        yellow:  '0xffe50a'
+#        blue:    '0x1460d2'
+#        magenta: '0xff005d'
+#        cyan:    '0x00bbbb'
+#        white:   '0xbbbbbb'
+#
+#    # Bright colors
+#    bright:
+#        black:   '0x555555'
+#        red:     '0xf40e17'
+#        green:   '0x3bd01d'
+#        yellow:  '0xedc809'
+#        blue:    '0x5555ff'
+#        magenta: '0xff55ff'
+#        cyan:    '0x6ae3fa'
+#        white:   '0xffffff'
+
+# Colors (Ayu Dark)
+#colors:
+    # Default colors
+#    primary:
+#        background: '0x0A0E14'
+#        foreground: '0xB3B1AD'
+
+    # Normal colors
+#    normal:
+#        black:      '0x01060E'
+#        red:        '0xEA6C73'
+#        green:      '0x91B362'
+#        yellow:     '0xF9AF4F'
+#        blue:       '0x53BDFA'
+#        magenta:    '0xFAE994'
+#        cyan:       '0x90E1C6'
+#        white:      '0xC7C7C7'
+#
+    # Bright colors
+#    bright:
+#        black:      '0x686868'
+#        red:        '0xF07178'
+#        green:      '0xC2D94C'
+#        yellow:     '0xFFB454'
+#        blue:       '0x59C2FF'
+#        magenta:    '0xFFEE99'
+#        cyan:       '0x95E6CB'
+#        white:      '0xFFFFFF'
+
+font:
+    # Normal (roman) font face
+    normal:
+        # Font family
+        #
+        # Default:
+        #   - (macOS) Mnelo
+        #   - (Linux) monospace
+        # family: 'SF Mono'
+        family: 'Victor Mono'
+
+        # The `style` can be specified to pick a specific face.
+        # style: Regular
+
+    # Bold font face
+    bold:
+        family: 'Victor Mono'
+
+    # Italic font face
+    italic:
+        family: 'Victor Mono'
+        style: Italic
+
+    # Point size
+    size: 14.0
+
+    # Extra space around each character
+    offset:
+        x: 0
+        y: 0
+
+    glyph_offset:
+        x: 0
+        y: 0
+
+key_bindings:
+    - { key: V,         mods: Alt,          action: Paste               }
+    - { key: C,         mods: Alt,          action: Copy                }
+    - { key: Q,         mods: Alt,          action: Quit                }
+    - { key: N,         mods: Alt,          action: SpawnNewInstance    }
+    - { key: Return,    mods: Alt,          action: ToggleFullscreen    }
+
+shell:
+    program: 'wsl.exe ~'
