@@ -15,21 +15,23 @@ let g:nord_cursor_line_number_background = 1
 " colorscheme cobalt2
 " colorscheme dracula
 " colorscheme night-owl
-colorscheme nord
+" colorscheme nord
 " colorscheme one
 " colorscheme onedark
 " colorscheme palenight
 " colorscheme seoul256
 " colorscheme citylights
+colorscheme gruvbox-material
 
 " Enable the lightline theme
 " let g:lightline = { 'colorscheme': 'dracula' }
-let g:lightline = { 'colorscheme': 'nord' }
+" let g:lightline = { 'colorscheme': 'nord' }
 " let g:lightline = { 'colorscheme': 'nightowl' }
 " let g:lightline = { 'colorscheme': 'seoul256' }
 " let g:lightline = { 'colorscheme': 'citylights' }
 " let g:lightline = { 'colorscheme': 'one' }
 " let g:lightline = { 'colorscheme': 'onedark' }
+let g:lightline = { 'colorscheme': 'gruvbox_material' }
 
 highlight Comment cterm=italic gui=italic
 highlight Visual cterm=reverse ctermbg=NONE
