@@ -32,6 +32,7 @@ let g:lightline = { 'colorscheme': 'nord' }
 " let g:lightline = { 'colorscheme': 'onedark' }
 
 highlight Comment cterm=italic gui=italic
+highlight Visual cterm=reverse ctermbg=NONE
 
 " Startify
 let g:startify_fortune_use_unicode = 1
