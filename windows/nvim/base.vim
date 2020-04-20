@@ -11,7 +11,7 @@ set undofile
 set ignorecase
 set smartcase
 set inccommand = "split"
-"set termguicolors		 " Enable 24-bit colors
+set termguicolors		 " Enable 24-bit colors
 set nu
 set noshowmode
 set hidden
