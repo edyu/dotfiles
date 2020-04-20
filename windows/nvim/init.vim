@@ -4,6 +4,8 @@ endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim
 
+filetype plugin indent on
+
 " Required:
 if dein#load_state('~/.local/share/dein')
 	call dein#begin('~/.local/share/dein')
@@ -42,6 +44,10 @@ if dein#load_state('~/.local/share/dein')
 	call dein#add('rust-lang/rust.vim', {'on_ft': 'rust'})
 	call dein#add('sebastianmarkow/deoplete-rust', {'on_ft': 'rust'})
 	call dein#add('mattn/webapi-vim', {'on_ft': 'rust'})
+    " For dart 
+	call dein#add('dart-lang/dart-vim-plugin', {'on_ft': 'dart'})
+	call dein#add('natebosch/vim-lsc', {'on_ft': 'dart'})
+	call dein#add('natebosch/vim-lsc-dart', {'on_ft': 'dart'})
 
 	call dein#add('junegunn/fzf.vim')
 	" Damn you curly braces!
@@ -57,6 +63,7 @@ if dein#load_state('~/.local/share/dein')
 	call dein#end()
 	call dein#save_state()
 endif
+
 "-----------------------------Load files-----------------------------
 source ~/.config/nvim/base.vim
 source ~/.config/nvim/mappings.vim

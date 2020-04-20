@@ -46,3 +46,13 @@ highlight Comment cterm=italic gui=italic
 
 " Startify
 let g:startify_fortune_use_unicode = 1
+
+" Dart
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
+
+" lsc
+set shortmess-=F
+let g:lsc_server_commands = { 'dart': 'dart_language_server' }
+let g:lsc_auto_map = v:true
