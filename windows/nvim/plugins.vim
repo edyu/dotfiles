@@ -6,7 +6,12 @@ set background=dark
 " available values: 'hard', 'medium'(default), 'soft'
 let g:gruvbox_material_background = 'medium'
 let g:gruvbox_material_enable_italic = 1
-" let g:gruvbox_material_disable_italic_comment = 1
+""let g:gruvbox_material_disable_italic_comment = 1
+
+" neodark
+" let g:neodark#background = '#202020'
+""let g:neodark#terminal_transparent = 1
+""let g:neodark#solid_vertsplit = 1
 
 " nord
 " let g:nord_italic = 1
@@ -24,6 +29,7 @@ let g:gruvbox_material_enable_italic = 1
 " colorscheme cobalt2
 " colorscheme dracula
 colorscheme gruvbox-material
+" colorscheme neodark
 " colorscheme night-owl
 " colorscheme nord
 " colorscheme one
@@ -35,6 +41,7 @@ colorscheme gruvbox-material
 " let g:lightline = { 'colorscheme': 'citylights' }
 " let g:lightline = { 'colorscheme': 'dracula' }
 let g:lightline = { 'colorscheme': 'gruvbox_material' }
+" let g:lightline = { 'colorscheme': 'neodark' }
 " let g:lightline = { 'colorscheme': 'nord' }
 " let g:lightline = { 'colorscheme': 'nightowl' }
 " let g:lightline = { 'colorscheme': 'seoul256' }

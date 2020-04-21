@@ -26,6 +26,7 @@ if dein#load_state('~/.local/share/dein')
 	call dein#add('junegunn/seoul256.vim')
 	call dein#add('rakr/vim-one')
 	call dein#add('sainnhe/gruvbox-material')
+	call dein#add('KeitaNakamura/neodark.vim')
 
 	call dein#add('ryanoasis/vim-devicons')
 	call dein#add('itchyny/lightline.vim')
