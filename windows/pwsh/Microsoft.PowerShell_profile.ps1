@@ -51,4 +51,11 @@ function global:prompt {
     return " "
 }
 
+function git_status { git status --short }
+function git_log { git log --graph --abbrev-commit --date-order --format=format:'%Cblue%h%Creset%C(bold red)%d%Creset %s <%an> %Cgreen(%ar)%Creset' --all }
+
+Set-Alias -Name vi -Value nvim
+Set-Alias -Name gs -Value git_status
+Set-Alias -Name gl -Value git_log -Force
+
 cd ~
