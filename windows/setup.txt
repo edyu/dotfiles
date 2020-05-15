@@ -1,0 +1,30 @@
+#pwsh
+ln C:\Users\edlyu\ws\dotfiles\windows\pwsh\Microsoft.PowerShell_profile.ps1 ln C:\Users\edlyu\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+choco install colortools
+cd c:\ProgramData\chocolatey\lib\colortool\content
+download Nord.itermcolors
+
+#nvim
+ln C:\Users\edlyu\ws\dotfiles\windows\nvim C:\Users\edlyu\.config\nvim
+ln C:\Users\edlyu\ws\dotfiles\windows\nvim C:\Users\edlyu\AppData\Local\nvim
+Invoke-WebRequest https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.ps1 -OutFile installer.ps1
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+./installer.ps1 ~/.local/share/dein
+
+
+#terminal
+ln C:\Users\edlyu\ws\dotfiles\windows\terminal\settings.json C:\Users\edlyu\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+
+#alacritty
+ln C:\Users\edlyu\ws\dotfiles\windows\alacritty\alacritty.yml C:\Users\edlyu\AppData\Roaming\alacritty\alacritty.yaml 
+
+#wsl
+#  fish
+ln -s ~/ws/dotfiles/windows/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/ws/dotfiles/windows/fish/fishfile ~/.config/fish/fishfile
+ln -s ~/ws/dotfiles/windows/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+#  nvim
+ln -s ~/ws/dotfiles/windows/nvim ~/.config/nvim
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.local/share/dein
