@@ -6,7 +6,7 @@
 #end
 set -gx EDITOR nvim
 set -gx VISUAL nvim
-source ~/.cargo/env
+#source ~/.cargo/env
 
 alias vi nvim
 
@@ -24,3 +24,9 @@ alias gs 'git status --short'
 set -g fish_key_bindings fish_vi_key_bindings
 set PATH $PATH /usr/lib/dart/bin
 set PATH $PATH $HOME/.pub-cache/bin
+
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
