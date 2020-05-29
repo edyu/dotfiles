@@ -70,5 +70,6 @@ let g:dart_format_on_save = 1
 " lsc
 "set shortmess-=F
 "let g:lsc_server_commands = { 'dart': 'dart_language_server' }
+let g:lsc_enable_autocomplete = v:false
 let g:lsc_auto_map = v:true
 "set hidden
