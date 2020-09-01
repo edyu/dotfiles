@@ -21,6 +21,7 @@ if dein#load_state('~/.local/share/dein')
 	call dein#add('herrbischoff/cobalt2.vim')
 	call dein#add('dracula/vim', {'as': 'dracula'})
 	call dein#add('sainnhe/gruvbox-material')
+	call dein#add('yorickpeterse/happy_hacking.vim')
 	call dein#add('KeitaNakamura/neodark.vim')
 	call dein#add('haishanh/night-owl.vim')
 	call dein#add('arcticicestudio/nord-vim')
@@ -29,6 +30,7 @@ if dein#load_state('~/.local/share/dein')
 	call dein#add('drewtempelmeyer/palenight.vim')
 	call dein#add('junegunn/seoul256.vim')
 	call dein#add('rakr/vim-one')
+	call dein#add('yorickpeterse/vim-paper')
 
 	call dein#add('ryanoasis/vim-devicons')
 	call dein#add('itchyny/lightline.vim')
@@ -74,3 +76,4 @@ endif
 source ~/.config/nvim/base.vim
 source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/coc.vim

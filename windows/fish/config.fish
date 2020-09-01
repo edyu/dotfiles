@@ -24,6 +24,7 @@ alias gs 'git status --short'
 set -g fish_key_bindings fish_vi_key_bindings
 set PATH $PATH /usr/lib/dart/bin
 set PATH $PATH $HOME/.pub-cache/bin
+set PATH $PATH $HOME/.cargo/bin
 
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config

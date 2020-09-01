@@ -3,7 +3,7 @@ set background=dark
 
 " ayu
 " let ayucolor=""light"
-" let ayucolor="mirage"
+let ayucolor="mirage"
 " let ayucolor="dark"
 
 " gruvbox-material
@@ -15,7 +15,7 @@ set background=dark
 ""let g:gruvbox_material_disable_italic_comment = 1
 
 " neodark
-let g:neodark#background = '#202020'
+"let g:neodark#background = '#202020'
 ""let g:neodark#terminal_transparent = 1
 ""let g:neodark#solid_vertsplit = 1
 
@@ -31,25 +31,27 @@ let g:neodark#background = '#202020'
 " let g:onedark_terminal_italics = 1
 
 " Colorscheme
-" colorscheme ayu
+colorscheme ayu
 " colorscheme citylights
 " colorscheme cobalt2
 " colorscheme dracula
 " colorscheme gruvbox-material
-colorscheme neodark
+" colorscheme happy_hacking
+" colorscheme neodark
 " colorscheme night-owl
 " colorscheme nord
 " colorscheme one
 " colorscheme onedark
+" colorscheme paper
 " colorscheme PaperColor
 " colorscheme palenight
 " colorscheme seoul256
 
 " Enable the lightline theme
-" let g:lightline = { 'colorscheme': 'ayu' }
+let g:lightline = { 'colorscheme': 'ayu' }
 " let g:lightline = { 'colorscheme': 'dracula' }
 " let g:lightline = { 'colorscheme': 'gruvbox_material' }
-let g:lightline = { 'colorscheme': 'neodark' }
+" let g:lightline = { 'colorscheme': 'neodark' }
 " let g:lightline = { 'colorscheme': 'nord' }
 " let g:lightline = { 'colorscheme': 'nightowl' }
 " let g:lightline = { 'colorscheme': 'seoul256' }

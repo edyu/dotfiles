@@ -19,8 +19,8 @@ set grepprg=rg\ --vimgrep
 set grepformat^=%f:%l:%c:%m
 set completeopt=noinsert,menuone,noselect
 " set formatexpr=LanguageClien##textDocument_rangeFormatting_sync()
-set tabstop=4
+set tabstop=2
 set expandtab
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set incsearch
