@@ -45,7 +45,9 @@ Plug 'honza/vim-snippets'
 Plug 'rust-lang/rust.vim', {'on_ft': 'rust'}
 Plug 'sebastianmarkow/deoplete-rust', {'on_ft': 'rust'}
 Plug 'mattn/webapi-vim', {'on_ft': 'rust'}
-"   Collection of common configurations for the Nvim LSP client
+" For Haskell
+Plug 'neovimhaskell/haskell-vim'
+" Collection of common configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
 "   Completion framework
 Plug 'hrsh7th/nvim-cmp'
