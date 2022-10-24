@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/deoplete.nvim'
 " Linting
 Plug 'w0rp/ale'
-" Theme
+" Themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'agreco/vim-citylights'
 Plug 'herrbischoff/cobalt2.vim'
@@ -45,6 +45,27 @@ Plug 'honza/vim-snippets'
 Plug 'rust-lang/rust.vim', {'on_ft': 'rust'}
 Plug 'sebastianmarkow/deoplete-rust', {'on_ft': 'rust'}
 Plug 'mattn/webapi-vim', {'on_ft': 'rust'}
+"   Collection of common configurations for the Nvim LSP client
+Plug 'neovim/nvim-lspconfig'
+"   Completion framework
+Plug 'hrsh7th/nvim-cmp'
+"   LSP completion source for nvim-cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+"   Snippet completion source for nvim-cmp
+Plug 'hrsh7th/cmp-vsnip'
+"   Other usefull completion sources
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
+"   To enable more of the features of rust-analyzer, such as inlay hints and more!
+Plug 'simrat39/rust-tools.nvim'
+"   Snippet engine
+Plug 'hrsh7th/vim-vsnip'
+"   Fuzzy finder
+"   Optional
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
   " For Dart 
 "Plug 'dart-lang/dart-vim-plugin', {'on_ft': 'dart'}
 "Plug 'natebosch/vim-lsc', {'on_ft': 'dart'}

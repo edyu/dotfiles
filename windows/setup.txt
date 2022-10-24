@@ -13,24 +13,30 @@ ln C:\Users\edlyu\ws\dotfiles\windows\nvim C:\Users\edlyu\.config\nvim
 ln C:\Users\edlyu\ws\dotfiles\windows\nvim C:\Users\edlyu\AppData\Local\nvim
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-#Invoke-WebRequest https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.ps1 -OutFile installer.ps1
-#Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-#./installer.ps1 ~/.local/share/dein
 
 
 #terminal
-ln C:\Users\edlyu\ws\dotfiles\windows\terminal\settings.json C:\Users\edlyu\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+cp C:\Users\edlyu\ws\dotfiles\windows\terminal\settings.json C:\Users\edlyu\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 
 #alacritty
 ln C:\Users\edlyu\ws\dotfiles\windows\alacritty\alacritty.yml C:\Users\edlyu\AppData\Roaming\alacritty\alacritty.yaml 
 
 #wsl
 #  fish
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
 ln -s ~/ws/dotfiles/windows/fish/config.fish ~/.config/fish/config.fish
 ln -s ~/ws/dotfiles/windows/fish/fishfile ~/.config/fish/fishfile
-ln -s ~/ws/dotfiles/windows/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+#fisher install ilancosman/tide
+fisher install jorgebucaran/hydro
+#ln -s ~/ws/dotfiles/windows/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 #  nvim
+# install 0.5
+# https://sharksforarms.dev/posts/neovim-rust/
+# sudo add-apt-repository ppa:neovim-ppa/stable 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# in nvim :PlugInstall
 ln -s ~/ws/dotfiles/windows/nvim ~/.config/nvim
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.local/share/dein
