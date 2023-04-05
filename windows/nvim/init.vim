@@ -14,7 +14,6 @@ Plug 'w0rp/ale'
 " Themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'agreco/vim-citylights'
-Plug 'herrbischoff/cobalt2.vim'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'sainnhe/gruvbox-material'
 Plug 'yorickpeterse/happy_hacking.vim'
@@ -75,6 +74,9 @@ Plug 'nvim-telescope/telescope.nvim'
 "Plug 'neoclide/coc.nvim', {'merged':0, 'rev':'release'}
   " For Svelte
 Plug 'evanleck/vim-svelte'
+
+  " For Julia
+Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'junegunn/fzf.vim'
 " Damn you curly braces!
