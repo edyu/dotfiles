@@ -29,6 +29,9 @@ if status is-interactive
   set PATH $HOME/.local/bin $PATH
   set PATH $HOME/ws/flutter/bin $PATH
   set PATH $HOME/julia-1.8.5/bin $PATH
+
+  set -x JULIA_EDITOR nvim
+
   set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/ed/.ghcup/bin $PATH # ghcup-env
 
   if not functions -q fisher
