@@ -10,9 +10,9 @@ set background=light
 " set contrast
 " this configuration option should be placed before `colorscheme gruvbox-material`
 " available values: 'hard', 'medium'(default), 'soft'
-" let g:gruvbox_material_background = 'medium'
-" let g:gruvbox_material_enable_italic = 1
-""let g:gruvbox_material_disable_italic_comment = 1
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_enable_italic = 1
+" let g:gruvbox_material_disable_italic_comment = 1
 
 " neodark
 "let g:neodark#background = '#202020'
@@ -35,14 +35,14 @@ set background=light
 " colorscheme citylights
 " colorscheme cobalt2
 " colorscheme dracula
-" colorscheme gruvbox-material
+colorscheme gruvbox-material
 " colorscheme happy_hacking
 " colorscheme neodark
 " colorscheme night-owl
 " colorscheme nord
 " colorscheme one
 " colorscheme onedark
-colorscheme paper
+" colorscheme paper
 " colorscheme PaperColor
 " colorscheme palenight
 " colorscheme seoul256
