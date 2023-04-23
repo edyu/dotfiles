@@ -1,5 +1,5 @@
-" set background=dark
-set background=light
+set background=dark
+"set background=light
 
 " ayu
 " let ayucolor="light"

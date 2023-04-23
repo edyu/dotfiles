@@ -39,4 +39,8 @@ if status is-interactive
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
   end
+
+  if type -q nvm
+    nvm use lts
+  end
 end
