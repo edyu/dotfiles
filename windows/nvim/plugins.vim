@@ -10,8 +10,8 @@ set background=dark
 " set contrast
 " this configuration option should be placed before `colorscheme gruvbox-material`
 " available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'soft'
-let g:gruvbox_material_enable_italic = 1
+" let g:gruvbox_material_background = 'soft'
+" let g:gruvbox_material_enable_italic = 1
 " let g:gruvbox_material_disable_italic_comment = 1
 
 " neodark
@@ -28,14 +28,25 @@ let g:gruvbox_material_enable_italic = 1
 " vim-one
 " let g:one_allow_italics = 1
 
+" onedark
 " let g:onedark_terminal_italics = 1
+
+" seoul256 (dark):
+"   Range:   233 (darkest) ~ 239 (lightest)
+"   Default: 237
+let g:seoul256_background = 234
+
+" seoul256 (light):
+"   Range:   252 (darkest) ~ 256 (lightest)
+"   Default: 253
+" let g:seoul256_background = 256
 
 " Colorscheme
 " colorscheme ayu
 " colorscheme citylights
 " colorscheme cobalt2
 " colorscheme dracula
-colorscheme gruvbox-material
+" colorscheme gruvbox-material
 " colorscheme happy_hacking
 " colorscheme neodark
 " colorscheme night-owl
@@ -45,18 +56,20 @@ colorscheme gruvbox-material
 " colorscheme paper
 " colorscheme PaperColor
 " colorscheme palenight
-" colorscheme seoul256
+colorscheme seoul256
+" colorscheme seoul256-light
 
 " Enable the lightline theme
 " let g:lightline = { 'colorscheme': 'ayu' }
 " let g:lightline = { 'colorscheme': 'dracula' }
-let g:lightline = { 'colorscheme': 'gruvbox_material' }
+" let g:lightline = { 'colorscheme': 'gruvbox_material' }
 " let g:lightline = { 'colorscheme': 'neodark' }
 " let g:lightline = { 'colorscheme': 'nord' }
 " let g:lightline = { 'colorscheme': 'nightowl' }
-" let g:lightline = { 'colorscheme': 'seoul256' }
+let g:lightline = { 'colorscheme': 'seoul256' }
 " let g:lightline = { 'colorscheme': 'one' }
 " let g:lightline = { 'colorscheme': 'onedark' }
+" let g:lightline = { 'colorscheme': 'PaperColor' }
 
 highlight Comment cterm=italic gui=italic
 "highlight Visual cterm=reverse ctermbg=NONE

@@ -24,6 +24,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'shinchu/lightline-seoul256.vim'
 Plug 'rakr/vim-one'
 Plug 'yorickpeterse/vim-paper'
 
