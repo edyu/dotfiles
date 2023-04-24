@@ -77,10 +77,10 @@ Plug 'rafamadriz/friendly-snippets'
 " LSP-Zero
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
-"   To enable more of the features of rust-analyzer, such as inlay hints and more!
+" To enable more of the features of rust-analyzer, such as inlay hints and more!
 Plug 'simrat39/rust-tools.nvim'
-"   Fuzzy finder
-"   Optional
+" Fuzzy finder
+" Optional
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -107,8 +107,10 @@ Plug 'tpope/vim-fugitive', {'on_cmd': 'Gstatus', 'augroup': 'fugitive', 'on_sour
 Plug 'jiangmiao/auto-pairs'
 " Auto end tag
 Plug 'alvan/vim-closetag'
-
+" Expand abbrev
 " Initialize plugin system
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 "-----------------------------Load files-----------------------------
