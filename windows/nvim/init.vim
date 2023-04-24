@@ -47,21 +47,38 @@ Plug 'sebastianmarkow/deoplete-rust', {'on_ft': 'rust'}
 Plug 'mattn/webapi-vim', {'on_ft': 'rust'}
 " For Haskell
 Plug 'neovimhaskell/haskell-vim'
+
 " Collection of common configurations for the Nvim LSP client
+
+" LSP Support
 Plug 'neovim/nvim-lspconfig'
-"   Completion framework
+" Mason is optional
+Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'}
+Plug 'williamboman/mason-lspconfig.nvim'
+
+" Autocompletion framework
 Plug 'hrsh7th/nvim-cmp'
-"   LSP completion source for nvim-cmp
+" LSP completion source for nvim-cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
-"   Snippet completion source for nvim-cmp
+" Snippet completion source for nvim-cmp
 Plug 'hrsh7th/cmp-vsnip'
-"   Other usefull completion sources
-Plug 'hrsh7th/cmp-path'
+" Other 'optional' usefull completion sources
 Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lua'
+
+" Snippets
+Plug 'L3MON4D3/LuaSnip'
+" Optional
+Plug 'rafamadriz/friendly-snippets'
+" Snippet engine
+"Plug 'hrsh7th/vim-vsnip'
+" LSP-Zero
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+
 "   To enable more of the features of rust-analyzer, such as inlay hints and more!
 Plug 'simrat39/rust-tools.nvim'
-"   Snippet engine
-Plug 'hrsh7th/vim-vsnip'
 "   Fuzzy finder
 "   Optional
 Plug 'nvim-lua/popup.nvim'
@@ -72,9 +89,8 @@ Plug 'nvim-telescope/telescope.nvim'
 "Plug 'dart-lang/dart-vim-plugin', {'on_ft': 'dart'}
 "Plug 'natebosch/vim-lsc', {'on_ft': 'dart'}
 "Plug 'natebosch/vim-lsc-dart', {'on_ft': 'dart'}
-"Plug 'neoclide/coc.nvim', {'merged':0, 'rev':'release'}
   " For Svelte
-Plug 'evanleck/vim-svelte'
+"Plug 'evanleck/vim-svelte'
 
   " For Julia
 Plug 'JuliaEditorSupport/julia-vim'
@@ -96,7 +112,7 @@ call plug#end()
 source ~/.config/nvim/base.vim
 source ~/.config/nvim/mappings.vim
 source ~/.config/nvim/plugins.vim
-"source ~/.config/nvim/coc.vim
+source ~/.config/nvim/lsp.vim
 
 if has("autocmd")
   augroup templates
