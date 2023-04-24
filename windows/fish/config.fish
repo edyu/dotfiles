@@ -22,6 +22,14 @@ if status is-interactive
   alias gl "git log --graph --abbrev-commit --date-order --format=format:'%Cblue%h%Creset%C(bold red)%d%Creset %s <%an> %Cgreen(%ar)%Creset' --all"
   alias gs 'git status --short'
 
+  function edge --wraps microsoft-edge --description 'alias edge=microsoft-edge'
+    microsoft-edge $argv > /dev/null 2>&1
+  end
+
+  function chrome --wraps google-chrome --description 'alias chrome=google-chrome'
+    google-chrome $argv > /dev/null 2>&1
+  end
+
   set -g fish_key_bindings fish_vi_key_bindings
   set PATH $PATH /usr/lib/dart/bin
   set PATH $HOME/.pub-cache/bin $PATH
