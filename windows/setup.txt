@@ -42,3 +42,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # lsp needs unzip
 # sudo apt install unzip
 ln -s ~/ws/dotfiles/windows/nvim ~/.config/nvim
+
+# setup wsl.conf for microsoft-edge
+# vi /etc/wsl.conf
+# [boot]
+# systemd=true
