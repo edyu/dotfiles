@@ -96,14 +96,17 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'JuliaEditorSupport/julia-vim'
 
 Plug 'junegunn/fzf.vim'
-" Damn you curly braces!
-Plug 'jiangmiao/auto-pairs'
 " Turns keyboard into a gamepad
 Plug 'justinmk/vim-sneak'
 " Why close vim to view file structure?
 Plug 'justinmk/vim-dirvish'
 " Vim + Git = Magic
 Plug 'tpope/vim-fugitive', {'on_cmd': 'Gstatus', 'augroup': 'fugitive', 'on_source': 'gitv'}
+
+" Damn you curly braces!
+Plug 'jiangmiao/auto-pairs'
+" Auto end tag
+Plug 'alvan/vim-closetag'
 
 " Initialize plugin system
 call plug#end()
