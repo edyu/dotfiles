@@ -28,7 +28,7 @@ if status is-interactive
   set PATH $HOME/.cargo/bin $PATH
   set PATH $HOME/.local/bin $PATH
   set PATH $HOME/ws/flutter/bin $PATH
-  set PATH $HOME/julia-1.8.5/bin $PATH
+  set PATH $HOME/.env/julia-1.8.5/bin $PATH
 
   set -x JULIA_EDITOR nvim
 
