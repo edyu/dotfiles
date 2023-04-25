@@ -30,6 +30,10 @@ if status is-interactive
     google-chrome $argv > /dev/null 2>&1
   end
 
+  function vite
+    npm create vite@latest $argv -- --template vanilla
+  end
+
   set -g fish_key_bindings fish_vi_key_bindings
   set PATH $PATH /usr/lib/dart/bin
   set PATH $HOME/.pub-cache/bin $PATH
