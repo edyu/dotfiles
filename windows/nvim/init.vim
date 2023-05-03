@@ -47,6 +47,8 @@ Plug 'sebastianmarkow/deoplete-rust', {'on_ft': 'rust'}
 Plug 'mattn/webapi-vim', {'on_ft': 'rust'}
 " For Haskell
 Plug 'neovimhaskell/haskell-vim'
+" For Zig
+Plug 'ziglang/zig.vim'
 
 " Collection of common configurations for the Nvim LSP client
 
