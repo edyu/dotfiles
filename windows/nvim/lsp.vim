@@ -16,7 +16,8 @@ lsp.ensure_installed({
   'julials',
   'tsserver',
   'eslint',
-  'rust_analyzer'
+  'rust_analyzer',
+  'zls'
 })
 
 -- (Optional) Configure lua language server for neovim
