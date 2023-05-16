@@ -125,4 +125,7 @@ if has("autocmd")
   augroup templates
     autocmd BufNewFile *.html 0r ~/.config/nvim/templates/skeleton.html
   augroup END
+  augroup templates
+    autocmd BufNewFile *.svg 0r ~/.config/nvim/templates/skeleton.svg
+  augroup END
 endif
