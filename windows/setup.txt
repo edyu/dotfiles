@@ -1,3 +1,11 @@
+#windows
+# install systemd by creating/editing the file `/etc/wsl.conf`
+[boot]
+systemd=true
+# restart wsl with `wsl --shutdown`
+sudo apt install chrony
+sudo systemctl restart chrony.service
+
 #pwsh
 # run in admin terminal
 New-Item -Path $PROFILE -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\windows\pwsh\Microsoft.PowerShell_profile.ps1
