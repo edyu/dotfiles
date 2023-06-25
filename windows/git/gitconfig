@@ -1,5 +1,14 @@
+[core]
+	editor = nvim
+	pager = less -S
 [user]
-	email = edyu@users.noreply.github.com
 	name = Ed Yu
-[credential]
-	helper = store
+	email = edyu@users.noreply.github.com
+[color]
+	branch = auto
+	diff = auto
+[diff]
+	renames = true
+	renameList = 0
+[merge]
+	conflictStyle = diff3
