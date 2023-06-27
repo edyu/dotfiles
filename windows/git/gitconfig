@@ -12,3 +12,5 @@
 	renameList = 0
 [merge]
 	conflictStyle = diff3
+[init]
+	defaultBranch = master
