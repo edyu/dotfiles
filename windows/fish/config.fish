@@ -34,17 +34,13 @@ if status is-interactive
     npm create vite@latest $argv -- --template vanilla
   end
 
-  set JULIA_HOME .env/julia-1.9.0
-  set ZIG_HOME .env/zig-linux-x86_64-0.11.0-dev.3132+465272921
-
   set -g fish_key_bindings fish_vi_key_bindings
   set PATH $PATH /usr/lib/dart/bin
   set PATH $HOME/.pub-cache/bin $PATH
   set PATH $HOME/.cargo/bin $PATH
   set PATH $HOME/.local/bin $PATH
   set PATH $HOME/ws/flutter/bin $PATH
-  set PATH $HOME/.env/$JULIA_HOME/bin $PATH
-  set PATH $HOME/$ZIG_HOME $PATH
+  set PATH $HOME/.env/bin $PATH
 
   set -x JULIA_EDITOR nvim
 
