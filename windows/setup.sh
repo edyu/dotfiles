@@ -53,4 +53,9 @@ git clone git@github.com:edyu/astronvim ~/.config/nvim/lua/user
 # node
 sudo snap install node --classic
 # zig
+# daily
 sudo snap install zig --edge --classic
+# 0.11.0
+sudo snap install zig --beta --classic
+# alpine
+alpine config --default-user root
