@@ -1,17 +1,17 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "newTab"
             },
             "keys": "alt+t"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "copy",
                 "singleLine": false
@@ -19,7 +19,7 @@
             "keys": "alt+c"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -36,21 +36,21 @@
             "keys": "alt+v"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "nextTab"
             },
             "keys": "alt+k"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "closeTab"
             },
             "keys": "alt+w"
         },
         {
-            "command": 
+            "command":
             {
                 "action": "prevTab"
             },
@@ -61,21 +61,21 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
         "defaults": {},
-        "list": 
+        "list":
         [
             {
                 "colorScheme": "Gruvbox Dark",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "font": 
+                "font":
                 {
                     "face": "Cascadia Code",
                     "size": 14.0
@@ -87,7 +87,7 @@
             {
                 "colorScheme": "Nord",
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "font": 
+                "font":
                 {
                     "face": "Cascadia Code",
                     "size": 14.0
@@ -98,7 +98,7 @@
             },
             {
                 "colorScheme": "Gruvbox Dark",
-                "font": 
+                "font":
                 {
                     "face": "Cascadia Code"
                 },
@@ -109,7 +109,7 @@
             },
             {
                 "colorScheme": "Ayu Mirage",
-                "font": 
+                "font":
                 {
                     "face": "Fantasque Sans Mono",
                     "size": 14.0
@@ -123,7 +123,7 @@
                 "colorScheme": "GruvboxMaterialMediumDark",
                 "commandline": "wsl.exe ~",
                 "cursorColor": "#FFDBCC",
-                "font": 
+                "font":
                 {
                     "face": "Victor Mono",
                     "size": 14.0
@@ -134,12 +134,12 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "colorScheme": "Ubuntu-ColorScheme",
-                "commandline": "wsl -d Alpine",
+                "colorScheme": "GruvboxMaterialSoftDark",
+                "commandline": "wsl -d Alpine --cd ~",
                 "cursorShape": "filledBox",
-                "font": 
+                "font":
                 {
-                    "face": "Cascadia Mono",
+                    "face": "Cascadia Code",
                     "size": 13.0
                 },
                 "guid": "{79690089-8c42-43c1-b6b4-62a11ac8a8b7}",
@@ -150,7 +150,7 @@
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#0A0E14",
