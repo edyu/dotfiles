@@ -1,4 +1,6 @@
 ## windows
+# run in admin terminal
+New-Item -Path C:\Users\edlyu\.wslconfig -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\windows\wsl.conf
 # install systemd by overwrite/copy the file `/etc/wsl.conf`
 # snap requires systemd
 cp wsl.conf /etc/wsl.conf
