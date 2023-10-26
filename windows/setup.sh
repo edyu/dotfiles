@@ -1,6 +1,8 @@
 ## windows
+# update to use autoMemoryReclaim
+wsl --update --pre-release
 # run in admin terminal
-New-Item -Path C:\Users\edlyu\.wslconfig -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\windows\wsl.conf
+New-Item -Path C:\Users\edlyu\.wslconfig -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\windows\wslconfig
 # install systemd by overwrite/copy the file `/etc/wsl.conf`
 # snap requires systemd
 cp wsl.conf /etc/wsl.conf
