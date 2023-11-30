@@ -41,25 +41,33 @@ ln C:\Users\edlyu\ws\dotfiles\windows\alacritty\alacritty.yml C:\Users\edlyu\App
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt upgrade
-ln -s ~/ws/dotfiles/windows/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/ws/dotfiles/fish/config.fish ~/.config/fish/config.fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-ln -s ~/ws/dotfiles/windows/fish/fish_plugins ~/.config/fish/fish_plugins
+ln -s ~/ws/dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
 fisher update
 #fisher install ilancosman/tide
 #fisher install jorgebucaran/hydro
 #ln -s ~/ws/dotfiles/windows/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 # git
-ln -s git/gitconfig ~/.gitconfig
+ln -s ~/ws/dotfiles/windows/git/gitconfig ~/.gitconfig
+
 # nvim
 sudo snap install nvim --classic
 git clone git@github.com:AstroNvim/AstroNvim ~/.config/nvim
 git clone git@github.com:edyu/astronvim ~/.config/nvim/lua/user
+
 # node
 sudo snap install node --classic
+
 # zig
 # daily
 sudo snap install zig --edge --classic
 # 0.11.0
 sudo snap install zig --beta --classic
+
 # alpine
 alpine config --default-user root
+
+# helix
+sudo snap install helix --classic
+ln -s ~/ws/dotfiles/windows/helix/config.toml ~/.config/helix/config.toml

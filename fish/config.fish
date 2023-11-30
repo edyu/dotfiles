@@ -5,11 +5,12 @@ if status is-interactive
   #	set_color normal
   #	echo -n ' > '
   #end
+  set -gx COLORTERM truecolor
   set -gx EDITOR nvim
   set -gx VISUAL nvim
   #source ~/.cargo/env
 
-  alias vi nvim
+  alias vi hx
 
   alias l ls
   alias ll 'ls -la'
@@ -41,8 +42,9 @@ if status is-interactive
   set PATH $HOME/.local/bin $PATH
   set PATH $HOME/ws/flutter/bin $PATH
   set PATH $HOME/.env/bin $PATH
+  set PATH $HOME/ws/Odin $PATH
 
-  set -x JULIA_EDITOR nvim
+  # set -x JULIA_EDITOR nvim
 
   set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/ed/.ghcup/bin $PATH # ghcup-env
 
