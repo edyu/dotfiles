@@ -70,4 +70,5 @@ alpine config --default-user root
 
 # helix
 sudo snap install helix --classic
+sudo snap install marksman
 ln -s ~/ws/dotfiles/windows/helix/config.toml ~/.config/helix/config.toml
