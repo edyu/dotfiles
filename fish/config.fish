@@ -6,8 +6,8 @@ if status is-interactive
   #	echo -n ' > '
   #end
   set -gx COLORTERM truecolor
-  set -gx EDITOR nvim
-  set -gx VISUAL nvim
+  set -gx EDITOR hx
+  set -gx VISUAL hx
   #source ~/.cargo/env
 
   alias vi hx
@@ -37,13 +37,16 @@ if status is-interactive
 
   set -gx ODIN_ROOT $HOME/.env/Odin
 
+  # set -g fish_cursor fish_vi_cursor
   set -g fish_key_bindings fish_vi_key_bindings
-  set PATH $HOME/.env/bin $PATH
-  set PATH $HOME/bin $PATH
+  set -U fish_cursor_default block
+  set -U fish_cursor_insert line
+  set -U fish_cursor_replace_one underscore
+  fish_add_path $HOME/bin $HOME/.env/bin
 
   # set -x JULIA_EDITOR nvim
 
-  set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/ed/.ghcup/bin $PATH # ghcup-env
+  set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; fish_add_path $HOME/.cabal/bin $HOME/.ghcup/bin # ghcup-env
 
   if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
