@@ -1,0 +1,5 @@
+[[language]]
+name = "odin"
+auto-format = true
+injection-regex = "odin"
+formatter = { command = "odinfmt", args = [ "-stdin", "true" ] }

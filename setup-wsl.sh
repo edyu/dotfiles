@@ -45,9 +45,14 @@ ln -s ~/ws/dotfiles/fish/config.fish ~/.config/fish/config.fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ln -s ~/ws/dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
 fisher update
+# fisher plugin needs fzf 0.3+ but ubuntu 22.04 only installs 0.29
+# download from https://github.com/junegunn/fzf/releases
+mkdir -p ~/.env
+mkdir -p ~/bin
 #fisher install ilancosman/tide
 #fisher install jorgebucaran/hydro
 #ln -s ~/ws/dotfiles/windows/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+
 # git
 ln -s ~/ws/dotfiles/windows/git/gitconfig ~/.gitconfig
 
@@ -72,3 +77,7 @@ alpine config --default-user root
 sudo snap install helix --classic
 sudo snap install marksman
 ln -s ~/ws/dotfiles/windows/helix/config.toml ~/.config/helix/config.toml
+ln -s ~/ws/dotfiles/windows/helix/languages.toml ~/.config/helix/languages.toml
+mkdir -p ~/.config/helix/runtime/queries
+
+# install odin, zls and ols in ~/.env and then link to them from ~/bin
