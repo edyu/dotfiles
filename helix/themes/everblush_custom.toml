@@ -1,0 +1,4 @@
+inherits = "everblush"
+
+"comment" = { fg = "magenta-light", modifiers = ["italic"] }
+"keyword" = { fg = "blue", modifiers = ["italic"] }
