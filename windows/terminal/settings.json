@@ -1,62 +1,6 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "alt+c"
-        },
-        {
-            "command": 
-            {
-                "action": "newTab"
-            },
-            "keys": "alt+t"
-        },
-        {
-            "command": "find",
-            "keys": "alt+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+d"
-        },
-        {
-            "command": "paste",
-            "keys": "alt+v"
-        },
-        {
-            "command": 
-            {
-                "action": "nextTab"
-            },
-            "keys": "alt+k"
-        },
-        {
-            "command": 
-            {
-                "action": "closeTab"
-            },
-            "keys": "alt+w"
-        },
-        {
-            "command": 
-            {
-                "action": "prevTab"
-            },
-            "keys": "alt+j"
-        }
-    ],
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
