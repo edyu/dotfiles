@@ -1,4 +1,5 @@
 ## windows
+
 # update to use autoMemoryReclaim
 wsl --update --pre-release
 # run in admin terminal
@@ -12,7 +13,7 @@ cp wsl.conf /etc/wsl.conf
 sudo apt install chrony
 sudo systemctl restart chrony.service
 
-#pwsh
+# pwsh
 # run in admin terminal
 New-Item -Path $PROFILE -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\windows\pwsh\Microsoft.PowerShell_profile.ps1
 #New-Item -Path C:\Users\edlyu\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\windows\pwsh\Microsoft.PowerShell_profile.ps1
@@ -21,13 +22,19 @@ New-Item -Path $PROFILE -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles
 #cd c:\ProgramData\chocolatey\lib\colortool\content
 #download Nord.itermcolors
 
-#nvim
-mkdir C:\Users\edlyu\.config
+# helix
+winget install Helix.Helix
+mkdir C:\Users\edlyu\AppData\Roaming\helix\themes
+# run in admin terminal
+New-Item -Path C:\Users\edlyu\AppData\Roaming\helix\config.toml -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\helix\config.toml
+New-Item -Path C:\Users\edlyu\AppData\Roaming\helix\languages.toml -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\helix\languages.toml
+New-Item -Path C:\Users\edlyu\AppData\Roaming\helix\themes\everblush_custom.toml -ItemType SymbolicLink -Value C:\Users\edlyu\ws\dotfiles\helix\themes\everblush_custom.toml
+
+# nvim
 #ln C:\Users\edlyu\ws\dotfiles\windows\nvim C:\Users\edlyu\.config\nvim
 #ln C:\Users\edlyu\ws\dotfiles\windows\nvim C:\Users\edlyu\AppData\Local\nvim
 #iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 #    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-
 
 #terminal
 cp C:\Users\edlyu\ws\dotfiles\windows\terminal\settings.json C:\Users\edlyu\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
