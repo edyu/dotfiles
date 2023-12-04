@@ -1,7 +1,7 @@
 theme = "everblush_custom"
 
 [editor]
-line-number = "relative"
+# line-number = "relative"
 color-modes = true
 mouse = false
 

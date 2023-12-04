@@ -4,3 +4,4 @@ inherits = "everblush"
 "keyword" = { fg = "blue", modifiers = ["italic"] }
 "markup.link.text" = { fg = "cyan-light" }
 "markup.link.url" = { fg = "green", modifiers = ["italic"] }
+"constant.numeric.float" = { fg = "yellow" }
