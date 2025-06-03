@@ -2,6 +2,7 @@ inherits = "everblush"
 
 "comment" = { fg = "magenta-light", modifiers = ["italic"] }
 "keyword" = { fg = "blue", modifiers = ["italic"] }
+"function.macro" = { fg = "cyan-light", modifiers = ["italic"] } # defer
 "markup.link.text" = { fg = "cyan-light" }
 "markup.link.url" = { fg = "green", modifiers = ["italic"] }
 "constant.numeric.float" = { fg = "yellow" }

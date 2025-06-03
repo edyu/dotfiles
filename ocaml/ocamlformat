@@ -1,0 +1,3 @@
+#.ocamlformat
+profile=default # you can use 'janestreet'
+version=0.27.0 # check yours with ocamlformat --version

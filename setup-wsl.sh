@@ -44,10 +44,6 @@ ln C:\Users\edlyu\ws\dotfiles\windows\alacritty\alacritty.yml C:\Users\edlyu\App
 
 ## wsl
 # fish
-# need 3.4+ but ubuntu 22.04 only installs 3.3.1
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt update
-sudo apt upgrade
 ln -s ~/ws/dotfiles/fish/config.fish ~/.config/fish/config.fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ln -s ~/ws/dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
@@ -74,11 +70,15 @@ sudo snap install node --classic
 # zig
 # daily
 sudo snap install zig --edge --classic
-# 0.11.0
+# release
 sudo snap install zig --beta --classic
 
 # alpine
 alpine config --default-user root
+
+# ocaml
+ln -s ~/ws/dotfiles/ocaml/ocamlinit ~/.ocamlinit
+ln -s ~/ws/dotfiles/ocaml/ocamlformat ~/.ocamlformat
 
 # helix
 sudo snap install helix --classic
