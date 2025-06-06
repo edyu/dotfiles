@@ -77,7 +77,15 @@ sudo snap install zig --beta --classic
 alpine config --default-user root
 
 # ocaml
+sudo apt install ocaml opam
+opam init
+# opam switch # check environment
+# eval (opam env)
+opam install core core_bench utop
+# setup utop
 ln -s ~/ws/dotfiles/ocaml/ocamlinit ~/.ocamlinit
+# setup helix
+opam install ocaml-lsp-server ocamlformat
 ln -s ~/ws/dotfiles/ocaml/ocamlformat ~/.ocamlformat
 
 # helix
