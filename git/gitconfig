@@ -1,15 +1,18 @@
+[core]
+	autocrlf = input
+	editor = /usr/bin/hx
+	pager = less -S
 [user]
 	name = Ed Yu
-	email = ed@overnest.com
+	email = edyu@users.noreply.github.com
 [push]
 	default = simple
 [color]
 	ui = true
+	branch = auto
+	diff = auto
 [pull]
 	rebase = true
-[core]
-	autocrlf = input
-	editor = /usr/local/bin/vim
 [rerere]
 	enabled = true
 [alias]
@@ -17,9 +20,11 @@
 	lg = log --oneline --decorate --all --graph
 [branch]
 	autosetuprebase = always
-[credential]
-	helper = osxkeychain
 [diff]
 	tool = code-diff
 [difftool "code-diff"]
 	tool = code --wait --diff $LOCAL $REMOTE
+[merge]
+	conflictStyle = diff3
+[init]
+	defaultBranch = master

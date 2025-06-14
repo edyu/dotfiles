@@ -57,7 +57,7 @@ mkdir -p ~/bin
 #ln -s ~/ws/dotfiles/windows/fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 
 # git
-ln -s ~/ws/dotfiles/windows/git/gitconfig ~/.gitconfig
+ln -s ~/ws/dotfiles/git/gitconfig ~/.gitconfig
 
 # nvim
 sudo snap install nvim --classic
@@ -76,6 +76,15 @@ sudo snap install zig --beta --classic
 # alpine
 alpine config --default-user root
 
+# helix
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+sudo snap install marksman
+ln -s ~/ws/dotfiles/windows/helix/config.toml ~/.config/helix/config.toml
+ln -s ~/ws/dotfiles/windows/helix/languages.toml ~/.config/helix/languages.toml
+mkdir -p ~/.config/helix/runtime/queries
+
 # ocaml
 sudo apt install ocaml opam
 opam init
@@ -87,12 +96,5 @@ ln -s ~/ws/dotfiles/ocaml/ocamlinit ~/.ocamlinit
 # setup helix
 opam install ocaml-lsp-server ocamlformat
 ln -s ~/ws/dotfiles/ocaml/ocamlformat ~/.ocamlformat
-
-# helix
-sudo snap install helix --classic
-sudo snap install marksman
-ln -s ~/ws/dotfiles/windows/helix/config.toml ~/.config/helix/config.toml
-ln -s ~/ws/dotfiles/windows/helix/languages.toml ~/.config/helix/languages.toml
-mkdir -p ~/.config/helix/runtime/queries
 
 # install odin, zls and ols in ~/.env and then link to them from ~/bin
