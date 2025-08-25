@@ -37,6 +37,9 @@ if status is-interactive
 
     set -gx ODIN_ROOT $HOME/.env/Odin
 
+    set -gx GOPATH $HOME/ws/go
+    fish_add_path $GOPATH/bin
+
     # set -g fish_cursor fish_vi_cursor
     set -g fish_key_bindings fish_vi_key_bindings
     set -U fish_cursor_default block
