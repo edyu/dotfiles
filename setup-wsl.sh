@@ -86,7 +86,9 @@ ln -s ~/ws/dotfiles/windows/helix/languages.toml ~/.config/helix/languages.toml
 mkdir -p ~/.config/helix/runtime/queries
 
 # golang
+sudo snap install go --classic
 go install golang.org/x/tools/gopls@latest
+# install golangci-lint
 go install github.com/nametake/golangci-lint-langserver@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
 
