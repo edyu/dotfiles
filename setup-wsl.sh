@@ -91,6 +91,7 @@ go install golang.org/x/tools/gopls@latest
 # install golangci-lint
 go install github.com/nametake/golangci-lint-langserver@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
+sudo snap install golangci-lint --classic
 
 # ocaml
 sudo apt install ocaml opam
