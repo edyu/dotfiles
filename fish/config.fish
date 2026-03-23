@@ -22,6 +22,8 @@ if status is-interactive
     alias ggl 'git grep --files-with-matches'
     alias gl "git log --graph --abbrev-commit --date-order --format=format:'%Cblue%h%Creset%C(bold red)%d%Creset %s <%an> %Cgreen(%ar)%Creset' --all"
     alias gs 'git status --short'
+    alias rts "sed -i 's/[[:blank:]]*\$//'"
+
 
     function edge --wraps microsoft-edge --description 'alias edge=microsoft-edge'
         microsoft-edge $argv >/dev/null 2>&1
