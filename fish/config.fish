@@ -40,6 +40,14 @@ if status is-interactive
     set -gx GOPATH $HOME/ws/go
     fish_add_path $GOPATH/bin
 
+    set -gx PAR_ROOT $HOME/.env/par
+    fish_add_path $PAR_ROOT/bin
+
+    fish_add_path $HOME/.env/c3
+
+    set -gx DOTNET_NEW_PREFERRED_LANG 'F#'
+    fish_add_path $HOME/.dotnet/tools
+
     # set -g fish_cursor fish_vi_cursor
     set -g fish_key_bindings fish_vi_key_bindings
     set -U fish_cursor_default block
@@ -62,8 +70,10 @@ if status is-interactive
         nvm use lts
     end
 
-    # opam configuration
-    source /home/ed/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
+    if type -q opam
+        # opam configuration
+        source /home/ed/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 
-    eval (opam env)
+        eval (opam env)
+    end
 end

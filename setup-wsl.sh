@@ -81,8 +81,8 @@ sudo add-apt-repository ppa:maveonair/helix-editor
 sudo apt update
 sudo apt install helix
 sudo snap install marksman
-ln -s ~/ws/dotfiles/windows/helix/config.toml ~/.config/helix/config.toml
-ln -s ~/ws/dotfiles/windows/helix/languages.toml ~/.config/helix/languages.toml
+ln -s ~/ws/dotfiles/helix/config.toml ~/.config/helix/config.toml
+ln -s ~/ws/dotfiles/helix/languages.toml ~/.config/helix/languages.toml
 mkdir -p ~/.config/helix/runtime/queries
 
 # golang
