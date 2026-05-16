@@ -43,13 +43,16 @@ cp C:\Users\edlyu\ws\dotfiles\windows\terminal\settings.json C:\Users\edlyu\AppD
 ln C:\Users\edlyu\ws\dotfiles\windows\alacritty\alacritty.yml C:\Users\edlyu\AppData\Roaming\alacritty\alacritty.yaml 
 
 ## wsl
+#
 # fish
+sudo apt install fish
+# change shell to /usr/bin/fish
+sudo chsh
+sudo apt install fzf
 ln -s ~/ws/dotfiles/fish/config.fish ~/.config/fish/config.fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ln -s ~/ws/dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
 fisher update
-# fisher plugin needs fzf 0.3+ but ubuntu 22.04 only installs 0.29
-# download from https://github.com/junegunn/fzf/releases
 mkdir -p ~/.env
 mkdir -p ~/bin
 #fisher install ilancosman/tide
@@ -58,6 +61,19 @@ mkdir -p ~/bin
 
 # git
 ln -s ~/ws/dotfiles/git/gitconfig ~/.gitconfig
+
+# helix
+sudo apt install hx
+# sudo add-apt-repository ppa:maveonair/helix-editor
+# sudo apt update
+# sudo apt install helix
+# sudo snap install marksman
+ln -s ~/ws/dotfiles/helix/config.toml ~/.config/helix/config.toml
+ln -s ~/ws/dotfiles/helix/languages.toml ~/.config/helix/languages.toml
+mkdir -p ~/.config/helix/runtime/queries
+
+# dotnet
+sudo apt install dotnet-sdk-10.0
 
 # nvim
 sudo snap install nvim --classic
@@ -75,15 +91,6 @@ sudo snap install zig --beta --classic
 
 # alpine
 alpine config --default-user root
-
-# helix
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
-sudo snap install marksman
-ln -s ~/ws/dotfiles/helix/config.toml ~/.config/helix/config.toml
-ln -s ~/ws/dotfiles/helix/languages.toml ~/.config/helix/languages.toml
-mkdir -p ~/.config/helix/runtime/queries
 
 # golang
 sudo snap install go --classic
