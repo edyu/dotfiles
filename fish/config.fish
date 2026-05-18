@@ -24,7 +24,6 @@ if status is-interactive
     alias gs 'git status --short'
     alias rts "sed -i 's/[[:blank:]]*\$//'"
 
-
     function edge --wraps microsoft-edge --description 'alias edge=microsoft-edge'
         microsoft-edge $argv >/dev/null 2>&1
     end
@@ -58,6 +57,8 @@ if status is-interactive
     fish_add_path $HOME/bin $HOME/.env/bin
 
     # set -x JULIA_EDITOR nvim
+
+    set -gx SSL_CERT_DIR $HOME/.aspnet/dev-certs/trust:/usr/lib/ssl/certs
 
     set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
     fish_add_path $HOME/.cabal/bin $HOME/.ghcup/bin # ghcup-env
