@@ -64,13 +64,10 @@ ln -s ~/ws/dotfiles/git/gitconfig ~/.gitconfig
 
 # helix
 sudo apt install hx
-# sudo add-apt-repository ppa:maveonair/helix-editor
-# sudo apt update
-# sudo apt install helix
-# sudo snap install marksman
 ln -s ~/ws/dotfiles/helix/config.toml ~/.config/helix/config.toml
 ln -s ~/ws/dotfiles/helix/languages.toml ~/.config/helix/languages.toml
-mkdir -p ~/.config/helix/runtime/queries
+hx --grammar fetch
+hx --grammar build
 
 # dotnet
 sudo apt install dotnet-sdk-10.0
